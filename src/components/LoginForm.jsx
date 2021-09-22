@@ -31,11 +31,7 @@ const LoginForm = () => {
 								placeholder="Password"
 							/>
 
-							<MdRemoveRedEye
-								className="eye pointer"
-								color="#90A0B7"
-								fontSize="1.1rem"
-							/>
+							<MdRemoveRedEye className="eye pointer" fontSize="1.1rem" />
 						</div>
 					</div>
 					<hr />
