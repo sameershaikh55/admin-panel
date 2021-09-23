@@ -7,6 +7,7 @@ import "./styles/style.css";
 import { Switch, Route } from "react-router-dom";
 import { useState } from "react";
 import Dashboard from "./pages/Dashboard";
+import Users from "./pages/Users";
 
 function App() {
 	const [mode, setMode] = useState(true);
@@ -19,6 +20,7 @@ function App() {
 			<Switch>
 				<Route exact path="/" component={Login} />
 				<Route exact path="/dashboard" component={Dashboard} />
+				<Route exact path="/users" component={Users} />
 			</Switch>
 		</div>
 	);

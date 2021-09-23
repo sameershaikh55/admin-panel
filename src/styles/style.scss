@@ -568,6 +568,59 @@ hr {
 		}
 	}
 	// RECENT ACTIVITY END
+
+	// RECENT ACTIVITY END
+	.user_container_upper {
+		.user_btn_container {
+			button:nth-child(1) {
+				background: rgba(194, 207, 224, 0.25);
+				border-radius: 3px;
+				height: 30px;
+				width: 100px;
+			}
+			button:nth-child(2) {
+				background: #8961de;
+				border-radius: 3px;
+				height: 30px;
+				width: 100px;
+			}
+		}
+
+		.user_table {
+			max-width: 100%;
+			overflow-x: auto;
+
+			table {
+				width: 100%;
+
+				tr {
+					th {
+						padding: 1.2rem 0rem;
+					}
+				}
+			}
+			tbody {
+				tr {
+					td {
+						padding: 1.2rem 0rem;
+
+						&:nth-child(3) {
+							min-width: 100px;
+						}
+
+						&:nth-child(4) {
+							min-width: 100px;
+						}
+
+						&:nth-child(5) {
+							min-width: 180px;
+						}
+					}
+				}
+			}
+		}
+	}
+	// RECENT ACTIVITY END
 }
 // LIGHT END
 
@@ -707,6 +760,15 @@ hr {
 	}
 	.light .chart_container .charts {
 		padding: 7.4rem 0rem 0.8rem 0rem;
+	}
+	.light .user_container_upper .user_table tbody tr td:nth-child(1) {
+		min-width: 180px;
+	}
+	.light .user_container_upper .user_table tbody tr td:nth-child(2) {
+		min-width: 200px;
+	}
+	.light .user_container_upper .user_table tbody tr td:nth-child(6) {
+		min-width: 140px;
 	}
 }
 
