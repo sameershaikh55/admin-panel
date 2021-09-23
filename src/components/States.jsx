@@ -42,7 +42,7 @@ const States = () => {
 							<img src={prev.i} alt="" />
 							<div className="d-flex flex-column align-items-end">
 								<h6 className="mb-1 f18 fw600">{prev.t}</h6>
-								<p className="mb-0 color1 f14 text-end">{prev.d}</p>
+								<p className="mb-0 color1 f14 text-end mx-content">{prev.d}</p>
 							</div>
 						</div>
 					</div>

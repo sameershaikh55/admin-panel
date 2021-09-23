@@ -1,38 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import avt from "../assets/avt.svg";
 import { AiOutlineSearch } from "react-icons/ai";
+import { GiHamburgerMenu } from "react-icons/gi";
 import exit from "../assets/exit.svg";
 
 const Layout = ({ children }) => {
+	const [sideBar, setSideBar] = useState(false);
+
 	return (
 		<div className="layout_container d-flex">
-			<Sidebar />
+			<Sidebar sideBar={sideBar} setSideBar={setSideBar} />
 			<div className="w-100">
 				<div className="header_container shadow-sm d-flex justify-content-between align-items-center px-4 w-100">
-					<div className="position-relative">
-						<AiOutlineSearch
-							className="search_container me-3"
-							color="#90A0B7"
-							fontSize="1.5rem"
+					<div className="d-flex align-items-center">
+						<GiHamburgerMenu
+							onClick={() => setSideBar(!sideBar)}
+							color="#90a0b7"
+							fontSize="1.4rem"
+							className="pointer hamb"
 						/>
-						<input
-							type="text"
-							name=""
-							id=""
-							placeholder="Search Users..."
-							className="f18 border-0"
-						/>
+						<div className="d-flex align-items-center ms-4">
+							<AiOutlineSearch
+								className="search_container me-3"
+								color="#90A0B7"
+								fontSize="1.5rem"
+							/>
+							<input
+								type="text"
+								name=""
+								id=""
+								placeholder="Search Users..."
+								className="f18 border-0"
+							/>
+						</div>
 					</div>
 					<div className="d-flex align-items-center">
-						<div className="top_side d-flex align-items-center ps-4">
+						<div className="top_side d-none d-md-flex align-items-center ps-4">
 							<img src={avt} alt="" />
 							<div className="d-flex flex-column">
 								<p className="mb-0 ms-3 fw600 color3">nitr0</p>
 								<p className="mb-0 ms-3 fw400 color3">Owner</p>
 							</div>
 						</div>
-						<img className="ms-5" src={exit} alt="exit" />
+						<img className="exitBtn ms-0 ms-md-5 pointer" src={exit} alt="exit" />
 					</div>
 				</div>
 				{/* CHILDREN */}

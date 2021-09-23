@@ -1,13 +1,26 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import avt from "../assets/avt.svg";
+import { FaRegTimesCircle } from "react-icons/fa";
 
-const Sidebar = () => {
+const Sidebar = ({ sideBar, setSideBar }) => {
 	return (
-		<div className="sidebar_container">
-			<div className="top_side d-flex align-items-center ps-4">
-				<img src={avt} alt="" />
-				<p className="mb-0 ms-3 fw600 color3">MoloAIO</p>
+		<div
+			className={`${
+				(sideBar && "sidebarActive") || "nonActiveSidebar"
+			} sidebar_container`}
+		>
+			<div className="top_side d-flex align-items-center justify-content-between ps-4 pe-3 w-100">
+				<div className="d-flex align-items-center">
+					<img src={avt} alt="" />
+					<p className="mb-0 ms-3 fw600 color3">MoloAIO</p>
+				</div>
+				<FaRegTimesCircle
+					onClick={() => setSideBar(!sideBar)}
+					fontSize="1.8rem"
+					color="rgb(144, 160, 183)"
+					className="pointer hamb"
+				/>
 			</div>
 			<div className="home_side px-3 pt-3 pb-1">
 				<p className="fw600 color2 ps-3 mb-3">Home</p>

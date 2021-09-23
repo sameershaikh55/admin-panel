@@ -14,7 +14,7 @@ const RecentActivity = () => {
 			<hr />
 
 			<div className="px-4">
-				{[1, 1, 1, 1, 1].map((p, i) => {
+				{[1, 1, 1, 1, 1, 1, 1].map((p, i) => {
 					return (
 						<div className="d-flex pb-1">
 							<div className="mt-1">

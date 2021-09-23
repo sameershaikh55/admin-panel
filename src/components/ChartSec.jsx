@@ -212,9 +212,9 @@ const ChartSec = () => {
 						<div className="charts_btn w-100">
 							<div className="d-flex flex-column flex-md-row justify-content-between align-md-items-center w-100">
 								<div>
-									<h2>Sales Analytics</h2>
+									<h2 className="mb-0">Sales Analytics</h2>
 								</div>
-								<div className="btn_container mt-3 mt-md-0 align-self-center">
+								<div className="btn_container mt-3 mt-md-0 d-flex align-self-center">
 									<button
 										className={`${bigChartData === "data1" && "active_btn"}`}
 										onClick={() => setBgChartData("data1")}

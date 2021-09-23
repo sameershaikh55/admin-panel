@@ -21,14 +21,14 @@ const Dashboard = () => {
 
 				{/* BOTTOM SECTION */}
 				<div className="chart_container_upper mt-4">
-					<div className="row">
-						<div className="col-8 rounded-3">
+					<div className="row gy-4">
+						<div className="col-12 col-xl-8 rounded-3">
 							<div className="bg-white rounded-3">
 								<ChartSec />
 							</div>
 							<RecentTrans />
 						</div>
-						<div className="col-4">
+						<div className="col-12 col-xl-4">
 							<RecentActivity />
 						</div>
 					</div>
