@@ -1563,7 +1563,7 @@ body {
 }
 
 .dark .recent_trans::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f1f1f11e;
 }
 
 .dark .recent_trans::-webkit-scrollbar-thumb {

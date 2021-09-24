@@ -7,10 +7,12 @@ import noneActiveD from "../assets/recentActivity/noneActiveD.svg";
 const RecentActivity = ({ localMode }) => {
 	var img_Func = function (i) {
 		var img_;
-		if (localMode === "false") {
-			img_ = (i !== 0 && <img src={noneActive} alt="" />) || (
-				<img src={active} alt="" />
-			);
+		if (!localMode) {
+			if (localMode == 1) {
+				img_ = (i !== 0 && <img src={noneActive} alt="" />) || (
+					<img src={active} alt="" />
+				);
+			}
 		} else {
 			img_ = (i !== 0 && <img src={noneActiveD} alt="" />) || (
 				<img src={activeD} alt="" />

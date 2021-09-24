@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../layout";
 import {
 	AccountSettings,
@@ -9,6 +9,7 @@ import {
 } from "../components/SettingsBody";
 
 const Settings = ({ setMode, mode, localMode }) => {
+	useEffect(() => {}, [localMode, mode]);
 	return (
 		<Layout>
 			<div className="container-fluid px-4 py-3">

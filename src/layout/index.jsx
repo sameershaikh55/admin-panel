@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
 						</div>
 						<NavLink to="/">
 							<BiExit
-								className="exitBtn ms-0 ms-md-4 pointer color3"
+								className="ms-0 ms-md-4 pointer color3"
 								fontSize="1.5rem"
 							/>
 						</NavLink>

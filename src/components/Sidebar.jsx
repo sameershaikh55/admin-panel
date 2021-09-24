@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import avt from "../assets/avt.svg";
 import { FaRegTimesCircle } from "react-icons/fa";
 
 const Sidebar = ({ sideBar, setSideBar }) => {
+	useEffect(() => {
+		if (sideBar) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "auto";
+		}
+	}, [sideBar]);
+
 	return (
 		<div
 			className={`${

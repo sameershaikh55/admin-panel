@@ -38,9 +38,10 @@ export const DisplaySettings = ({ setMode, mode, localMode }) => {
 				<label htmlFor="Name">Logo</label>
 				<br />
 				<div class="upload-btn-wrapper mt-1 pointer">
-					{(localMode === "false" && (
-						<img src={upload} alt="" className="pointer" />
-					)) || <img src={uploadD} alt="" className="pointer" />}
+					{(!localMode && <img src={upload} alt="" className="pointer" />) ||
+						(localMode == 1 && (
+							<img src={upload} alt="" className="pointer" />
+						)) || <img src={uploadD} alt="" className="pointer" />}
 
 					<input type="file" name="myfile" className="pointer" />
 				</div>
@@ -106,11 +107,12 @@ export const DisplaySettings = ({ setMode, mode, localMode }) => {
 					<span className="">
 						<button
 							onClick={() => {
-								setMode("true");
-								localStorage.setItem("modeLocal", mode);
+								setMode(1);
+								localStorage.setItem("modeLocal", 1);
 							}}
 							className={`${
-								(localMode !== "true" && "bg-purple-dark text-white") ||
+								(!localMode && "bg-purple-dark text-white") ||
+								(localMode == 1 && "bg-purple-dark text-white") ||
 								"bg-purple-light color1"
 							} px-4 border-0`}
 						>
@@ -118,11 +120,11 @@ export const DisplaySettings = ({ setMode, mode, localMode }) => {
 						</button>
 						<button
 							onClick={() => {
-								setMode("false");
-								localStorage.setItem("modeLocal", mode);
+								setMode(2);
+								localStorage.setItem("modeLocal", 2);
 							}}
 							className={`${
-								(localMode !== "false" && "bg-purple-dark text-white") ||
+								(localMode == 2 && "bg-purple-dark text-white") ||
 								"bg-purple-light color1"
 							} px-4 border-0`}
 						>
