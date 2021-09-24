@@ -1,6 +1,6 @@
 import React from "react";
-import PaymentTable from "../components/PaymentTable";
-import ProductSetup from "../components/ProductSetup";
+import ReleaseSetup from "../components/ReleaseSetup";
+import ReleaseTable from "../components/ReleaseTable";
 import Layout from "../layout";
 
 const Release = () => {
@@ -18,10 +18,10 @@ const Release = () => {
 				<div className="payment_container_upper mt-4">
 					<div className="row gy-4">
 						<div className="col-12 col-lg-3">
-							<ProductSetup />
+							<ReleaseSetup />
 						</div>
 						<div className="col-12 col-lg-9">
-							<PaymentTable />
+							<ReleaseTable />
 						</div>
 					</div>
 				</div>

@@ -1091,6 +1091,176 @@ body {
   top: 0.6rem;
 }
 
+.light .release_setup {
+  /* The container */
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.light .release_setup .container_check {
+  margin-bottom: 0.8rem !important;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.light .release_setup .container_check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border-radius: 4px;
+}
+
+.light .release_setup .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background: #90a0b7;
+  border-radius: 4px;
+  opacity: 0.4;
+}
+
+.light .release_setup .container_check:hover input ~ .checkmark {
+  background-color: #ccc;
+  opacity: 1;
+}
+
+.light .release_setup .container_check input:checked ~ .checkmark {
+  background-color: #8961de;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.light .release_setup .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.light .release_setup .container_check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.light .release_setup .container_check .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.light .release_setup .first_s {
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+.light .release_setup .second_s {
+  border-bottom-left-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+}
+
+.light .release_table .btns_span {
+  z-index: 10;
+}
+
+.light .release_table button {
+  width: 110px;
+}
+
+.light .release_table .position-absolute {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.light .release_table .rete_head {
+  --bs-gutter-x: 1.2rem;
+  --bs-gutter-y: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
+
+.light .release_table .rete_head > * {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  margin-top: var(--bs-gutter-y);
+}
+
+.light .release_table .rete_head p {
+  min-height: 1px;
+  height: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 14.2857142857%;
+  border: 1px solid #ebeff2;
+}
+
+.light .release_table .body_p {
+  height: 110px;
+}
+
+.light .release_table table.cal {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.light .release_table table.cal tr td {
+  border: 1px solid #ebeff2;
+  width: 25%;
+}
+
+.light .release_table .releaseCal {
+  min-width: 100%;
+  overflow-x: auto;
+}
+
+.light .release_table .releaseCal table {
+  width: 100%;
+}
+
+.light .release_table .releaseCal table tr td {
+  width: 140px;
+}
+
+.light .release_table .col2 {
+  width: 60%;
+}
+
+.light .release_table .active {
+  padding: 0.2rem 0.5rem;
+  background: rgba(137, 97, 222, 0.25);
+  border: 1px solid #8961de;
+  border-radius: 5px;
+  color: #8961de;
+}
+
 .dark > * {
   color: #fff;
 }
@@ -2018,6 +2188,176 @@ body {
   top: 0.6rem;
 }
 
+.dark .release_setup {
+  /* The container */
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.dark .release_setup .container_check {
+  margin-bottom: 0.8rem !important;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dark .release_setup .container_check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border-radius: 4px;
+}
+
+.dark .release_setup .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background: #90a0b7;
+  border-radius: 4px;
+  opacity: 0.4;
+}
+
+.dark .release_setup .container_check:hover input ~ .checkmark {
+  background-color: #ccc;
+  opacity: 1;
+}
+
+.dark .release_setup .container_check input:checked ~ .checkmark {
+  background-color: #8961de;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.dark .release_setup .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.dark .release_setup .container_check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.dark .release_setup .container_check .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.dark .release_setup .first_s {
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+.dark .release_setup .second_s {
+  border-bottom-left-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+}
+
+.dark .release_table .btns_span {
+  z-index: 10;
+}
+
+.dark .release_table button {
+  width: 110px;
+}
+
+.dark .release_table .position-absolute {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.dark .release_table .rete_head {
+  --bs-gutter-x: 1.2rem;
+  --bs-gutter-y: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
+
+.dark .release_table .rete_head > * {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  margin-top: var(--bs-gutter-y);
+}
+
+.dark .release_table .rete_head p {
+  min-height: 1px;
+  height: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 14.2857142857%;
+  border: 1px solid #ebeff2;
+}
+
+.dark .release_table .body_p {
+  height: 110px;
+}
+
+.dark .release_table table.cal {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.dark .release_table table.cal tr td {
+  border: 1px solid rgba(235, 239, 242, 0.08);
+  width: 25%;
+}
+
+.dark .release_table .releaseCal {
+  min-width: 100%;
+  overflow-x: auto;
+}
+
+.dark .release_table .releaseCal table {
+  width: 100%;
+}
+
+.dark .release_table .releaseCal table tr td {
+  width: 140px;
+}
+
+.dark .release_table .col2 {
+  width: 60%;
+}
+
+.dark .release_table .active {
+  padding: 0.2rem 0.5rem;
+  background: rgba(137, 97, 222, 0.25);
+  border: 1px solid #8961de;
+  border-radius: 5px;
+  color: #8961de;
+}
+
 @media screen and (max-width: 1420px) {
   .light .upper_states .states_container .state {
     width: 25%;
@@ -2173,6 +2513,9 @@ body {
   }
   .dark .payment_container_upper .payment_table thead tr th:nth-child(6) {
     min-width: 110px;
+  }
+  .releaseCal {
+    margin-top: 3rem;
   }
 }
 

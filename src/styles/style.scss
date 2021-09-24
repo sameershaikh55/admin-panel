@@ -933,6 +933,175 @@ body {
 		}
 	}
 	// FORMS DATA END
+
+	// RELEASE SETUP START
+	.release_setup {
+		/* The container */
+		.container_check {
+			margin-bottom: 0.8rem !important;
+			position: relative;
+			padding-left: 35px;
+			margin-bottom: 12px;
+			cursor: pointer;
+			font-size: 22px;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		/* Hide the browser's default checkbox */
+		.container_check input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+			border-radius: 4px;
+		}
+
+		/* Create a custom checkbox */
+		.checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 18px;
+			width: 18px;
+			background: #90a0b7;
+			border-radius: 4px;
+			opacity: 0.4;
+		}
+
+		/* On mouse-over, add a grey background color */
+		.container_check:hover input ~ .checkmark {
+			background-color: #ccc;
+			opacity: 1;
+		}
+
+		/* When the checkbox is checked, add a blue background */
+		.container_check input:checked ~ .checkmark {
+			background-color: $color1;
+			border-radius: 4px;
+			opacity: 1;
+		}
+
+		/* Create the checkmark/indicator (hidden when not checked) */
+		.checkmark:after {
+			content: "";
+			position: absolute;
+			display: none;
+		}
+
+		/* Show the checkmark when checked */
+		.container_check input:checked ~ .checkmark:after {
+			display: block;
+		}
+
+		/* Style the checkmark/indicator */
+		.container_check .checkmark:after {
+			left: 7px;
+			top: 3px;
+			width: 5px;
+			height: 10px;
+			border: solid white;
+			border-width: 0 3px 3px 0;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+
+		.first_s {
+			border-bottom-right-radius: 0px !important;
+			border-top-right-radius: 0px !important;
+		}
+		.second_s {
+			border-bottom-left-radius: 0px !important;
+			border-top-left-radius: 0px !important;
+		}
+	}
+
+	.release_table {
+		.btns_span {
+			z-index: 10;
+		}
+
+		button {
+			width: 110px;
+		}
+
+		.position-absolute {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.rete_head {
+			--bs-gutter-x: 1.2rem;
+			--bs-gutter-y: 1.2rem;
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: calc(var(--bs-gutter-y) * -1);
+			margin-right: calc(var(--bs-gutter-x) * -0.5);
+			margin-left: calc(var(--bs-gutter-x) * -0.5);
+
+			& > * {
+				flex-shrink: 0;
+				width: 100%;
+				max-width: 100%;
+				margin-top: var(--bs-gutter-y);
+			}
+
+			p {
+				min-height: 1px;
+				height: 100%;
+				flex: 0 0 auto;
+				width: 14.2857142857%;
+				border: 1px solid #ebeff2;
+			}
+		}
+		.body_p {
+			height: 110px;
+		}
+
+		table.cal {
+			table-layout: fixed;
+			width: 100%;
+
+			tr {
+				td {
+					border: 1px solid #ebeff2;
+					width: 25%;
+				}
+			}
+		}
+
+		.releaseCal {
+			min-width: 100%;
+			overflow-x: auto;
+
+			table {
+				width: 100%;
+
+				tr {
+					td {
+						width: 140px;
+					}
+				}
+			}
+		}
+
+		.col2 {
+			width: 60%;
+		}
+
+		.active {
+			padding: 0.2rem 0.5rem;
+			background: rgba(137, 97, 222, 0.25);
+			border: 1px solid #8961de;
+			border-radius: 5px;
+			color: #8961de;
+		}
+	}
+	// RELEASE SETUP END
 }
 // LIGHT END
 
@@ -1700,6 +1869,175 @@ body {
 		}
 	}
 	// FORMS DATA END
+
+	// RELEASE SETUP START
+	.release_setup {
+		/* The container */
+		.container_check {
+			margin-bottom: 0.8rem !important;
+			position: relative;
+			padding-left: 35px;
+			margin-bottom: 12px;
+			cursor: pointer;
+			font-size: 22px;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		/* Hide the browser's default checkbox */
+		.container_check input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+			border-radius: 4px;
+		}
+
+		/* Create a custom checkbox */
+		.checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 18px;
+			width: 18px;
+			background: #90a0b7;
+			border-radius: 4px;
+			opacity: 0.4;
+		}
+
+		/* On mouse-over, add a grey background color */
+		.container_check:hover input ~ .checkmark {
+			background-color: #ccc;
+			opacity: 1;
+		}
+
+		/* When the checkbox is checked, add a blue background */
+		.container_check input:checked ~ .checkmark {
+			background-color: $color1;
+			border-radius: 4px;
+			opacity: 1;
+		}
+
+		/* Create the checkmark/indicator (hidden when not checked) */
+		.checkmark:after {
+			content: "";
+			position: absolute;
+			display: none;
+		}
+
+		/* Show the checkmark when checked */
+		.container_check input:checked ~ .checkmark:after {
+			display: block;
+		}
+
+		/* Style the checkmark/indicator */
+		.container_check .checkmark:after {
+			left: 7px;
+			top: 3px;
+			width: 5px;
+			height: 10px;
+			border: solid white;
+			border-width: 0 3px 3px 0;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+
+		.first_s {
+			border-bottom-right-radius: 0px !important;
+			border-top-right-radius: 0px !important;
+		}
+		.second_s {
+			border-bottom-left-radius: 0px !important;
+			border-top-left-radius: 0px !important;
+		}
+	}
+
+	.release_table {
+		.btns_span {
+			z-index: 10;
+		}
+
+		button {
+			width: 110px;
+		}
+
+		.position-absolute {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.rete_head {
+			--bs-gutter-x: 1.2rem;
+			--bs-gutter-y: 1.2rem;
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: calc(var(--bs-gutter-y) * -1);
+			margin-right: calc(var(--bs-gutter-x) * -0.5);
+			margin-left: calc(var(--bs-gutter-x) * -0.5);
+
+			& > * {
+				flex-shrink: 0;
+				width: 100%;
+				max-width: 100%;
+				margin-top: var(--bs-gutter-y);
+			}
+
+			p {
+				min-height: 1px;
+				height: 100%;
+				flex: 0 0 auto;
+				width: 14.2857142857%;
+				border: 1px solid #ebeff2;
+			}
+		}
+		.body_p {
+			height: 110px;
+		}
+
+		table.cal {
+			table-layout: fixed;
+			width: 100%;
+
+			tr {
+				td {
+					border: 1px solid rgba(235, 239, 242, 0.08);
+					width: 25%;
+				}
+			}
+		}
+
+		.releaseCal {
+			min-width: 100%;
+			overflow-x: auto;
+
+			table {
+				width: 100%;
+
+				tr {
+					td {
+						width: 140px;
+					}
+				}
+			}
+		}
+
+		.col2 {
+			width: 60%;
+		}
+
+		.active {
+			padding: 0.2rem 0.5rem;
+			background: rgba(137, 97, 222, 0.25);
+			border: 1px solid #8961de;
+			border-radius: 5px;
+			color: #8961de;
+		}
+	}
+	// RELEASE SETUP END
 }
 // DARK END
 
@@ -1862,6 +2200,9 @@ body {
 	}
 	.dark .payment_container_upper .payment_table thead tr th:nth-child(6) {
 		min-width: 110px;
+	}
+	.releaseCal {
+		margin-top: 3rem;
 	}
 }
 

@@ -8,11 +8,13 @@ const RecentActivity = ({ localMode }) => {
 	var img_Func = function (i) {
 		var img_;
 		if (!localMode) {
-			if (localMode == 1) {
-				img_ = (i !== 0 && <img src={noneActive} alt="" />) || (
-					<img src={active} alt="" />
-				);
-			}
+			img_ = (i !== 0 && <img src={noneActive} alt="" />) || (
+				<img src={active} alt="" />
+			);
+		} else if (localMode == 1) {
+			img_ = (i !== 0 && <img src={noneActive} alt="" />) || (
+				<img src={active} alt="" />
+			);
 		} else {
 			img_ = (i !== 0 && <img src={noneActiveD} alt="" />) || (
 				<img src={activeD} alt="" />
