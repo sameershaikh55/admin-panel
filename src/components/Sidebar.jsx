@@ -18,8 +18,7 @@ const Sidebar = ({ sideBar, setSideBar }) => {
 				<FaRegTimesCircle
 					onClick={() => setSideBar(!sideBar)}
 					fontSize="1.8rem"
-					color="rgb(144, 160, 183)"
-					className="pointer hamb"
+					className="pointer hamb color3"
 				/>
 			</div>
 			<div className="home_side px-3 pt-3 pb-1">
@@ -46,7 +45,7 @@ const Sidebar = ({ sideBar, setSideBar }) => {
 						<p className="mb-0">Payment Plans</p>
 					</div>
 				</NavLink>
-				<NavLink to="/payment" activeClassName="activeNav">
+				<NavLink to="/releases" activeClassName="activeNav">
 					<div className="mt-1 d-flex align-items-center position-relative">
 						<div className="img4"></div>
 						<p className="mb-0">Releases</p>
@@ -56,7 +55,7 @@ const Sidebar = ({ sideBar, setSideBar }) => {
 			<hr />
 			<div className="maintenence_side px-3 pt-2 pb-1">
 				<p className="fw600 color2 ps-3 mb-3">Maintenence</p>
-				<NavLink to="/users" activeClassName="activeNav">
+				<NavLink to="/settings" activeClassName="activeNav">
 					<div className="d-flex align-items-center position-relative">
 						<div className="img5"></div>
 						<p className="mb-0">Settings</p>

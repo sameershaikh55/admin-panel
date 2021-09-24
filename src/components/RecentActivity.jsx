@@ -1,8 +1,24 @@
 import React from "react";
 import active from "../assets/recentActivity/active.svg";
 import noneActive from "../assets/recentActivity/noneActive.svg";
+import activeD from "../assets/recentActivity/activeD.svg";
+import noneActiveD from "../assets/recentActivity/noneActiveD.svg";
 
-const RecentActivity = () => {
+const RecentActivity = ({ localMode }) => {
+	var img_Func = function (i) {
+		var img_;
+		if (localMode === "false") {
+			img_ = (i !== 0 && <img src={noneActive} alt="" />) || (
+				<img src={active} alt="" />
+			);
+		} else {
+			img_ = (i !== 0 && <img src={noneActiveD} alt="" />) || (
+				<img src={activeD} alt="" />
+			);
+		}
+		return img_;
+	};
+
 	return (
 		<div className="recent_activity bg-white rounded-3">
 			<div className="d-flex justify-content-between align-items-center px-4 pt-4">
@@ -18,9 +34,10 @@ const RecentActivity = () => {
 					return (
 						<div className="d-flex pb-1">
 							<div className="mt-1">
-								{(i !== 0 && <img src={noneActive} alt="" />) || (
+								{img_Func(i)}
+								{/* {(i !== 0 && <img src={noneActive} alt="" />) || (
 									<img src={active} alt="" />
-								)}
+								)} */}
 							</div>
 							<div className="ps-4">
 								<p

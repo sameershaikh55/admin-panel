@@ -1,5 +1,6 @@
 import React from "react";
 import { MdRemoveRedEye } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 const LoginForm = () => {
 	return (
@@ -37,7 +38,9 @@ const LoginForm = () => {
 					<hr />
 
 					<div className="px-4">
-						<button className="w-100 border-0 text-white f14">Create</button>
+						<NavLink to="/dashboard">
+							<button className="w-100 border-0 text-white f14">Create</button>
+						</NavLink>
 					</div>
 				</form>
 			</div>

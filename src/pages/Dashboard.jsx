@@ -5,7 +5,7 @@ import Layout from "../layout";
 import RecentActivity from "../components/RecentActivity";
 import RecentTrans from "../components/RecentTrans";
 
-const Dashboard = () => {
+const Dashboard = ({ localMode }) => {
 	return (
 		<Layout>
 			<div className="container-fluid px-4 py-3">
@@ -29,7 +29,7 @@ const Dashboard = () => {
 							<RecentTrans />
 						</div>
 						<div className="col-12 col-xl-4">
-							<RecentActivity />
+							<RecentActivity localMode={localMode} />
 						</div>
 					</div>
 				</div>

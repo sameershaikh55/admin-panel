@@ -210,9 +210,9 @@ const ChartSec = () => {
 				<div className="container-fluid">
 					<div className="charts bg-white">
 						<div className="charts_btn w-100">
-							<div className="d-flex flex-column flex-md-row justify-content-between align-md-items-center w-100">
+							<div className="d-flex flex-column flex-md-row justify-content-between align-md-items-center pt-1 w-100">
 								<div>
-									<h2 className="mb-0">Sales Analytics</h2>
+									<h6 className="mb-0 color2 f16">Sales Analytics</h6>
 								</div>
 								<div className="btn_container mt-3 mt-md-0 d-flex align-self-center">
 									<button
@@ -254,6 +254,7 @@ const ChartSec = () => {
 							</div>
 						</div>
 						<hr />
+						chart in development
 						{/* <Line
 							data={chartExample1[bigChartData]}
 							options={chartExample1.options}

@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import avt from "../assets/avt.svg";
 import { AiOutlineSearch } from "react-icons/ai";
+import { BiExit } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
-import exit from "../assets/exit.svg";
+import { NavLink } from "react-router-dom";
 
 const Layout = ({ children }) => {
 	const [sideBar, setSideBar] = useState(false);
@@ -16,14 +17,12 @@ const Layout = ({ children }) => {
 					<div className="d-flex align-items-center">
 						<GiHamburgerMenu
 							onClick={() => setSideBar(!sideBar)}
-							color="#90a0b7"
 							fontSize="1.4rem"
-							className="pointer hamb"
+							className="pointer hamb color3"
 						/>
 						<div className="d-flex align-items-center ms-4">
 							<AiOutlineSearch
-								className="search_container me-3"
-								color="#90A0B7"
+								className="search_container me-3 color3"
 								fontSize="1.5rem"
 							/>
 							<input
@@ -43,7 +42,12 @@ const Layout = ({ children }) => {
 								<p className="mb-0 ms-3 fw400 color3">Owner</p>
 							</div>
 						</div>
-						<img className="exitBtn ms-0 ms-md-5 pointer" src={exit} alt="exit" />
+						<NavLink to="/">
+							<BiExit
+								className="exitBtn ms-0 ms-md-4 pointer color3"
+								fontSize="1.5rem"
+							/>
+						</NavLink>
 					</div>
 				</div>
 				{/* CHILDREN */}
