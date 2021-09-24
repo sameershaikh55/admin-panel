@@ -474,8 +474,6 @@ hr {
 	// STATES END
 
 	// CHART START
-	.chart_container_upper {
-	}
 	.chart_container {
 		h2 {
 			color: #12163e;
@@ -621,6 +619,141 @@ hr {
 		}
 	}
 	// RECENT ACTIVITY END
+
+	// PAYMENT PLANS START
+	.payment_container_upper {
+		.product_setup {
+			label {
+				color: #90a0b7;
+				margin-bottom: 0.1rem;
+			}
+			input {
+				background: rgba(235, 239, 242, 0.35);
+				border: 1px solid #ebeff2;
+				border-radius: 5px;
+				height: 38px;
+				width: 100%;
+				color: #90a0b7;
+				font-size: 14px;
+				padding: 0rem 0.8rem;
+
+				&:focus {
+					outline: none;
+				}
+
+				&::placeholder {
+					color: #90a0b7;
+				}
+			}
+			textarea {
+				background: rgba(235, 239, 242, 0.35);
+				border: 1px solid #ebeff2;
+				border-radius: 5px;
+				width: 100%;
+				color: #90a0b7;
+				font-size: 14px;
+				padding: 0.8rem;
+				resize: none;
+
+				&:focus {
+					outline: none;
+				}
+
+				&::placeholder {
+					color: #90a0b7;
+				}
+			}
+
+			select {
+				background: rgba(235, 239, 242, 0.35);
+				border: 1px solid #ebeff2;
+				border-radius: 5px;
+				height: 38px;
+				width: 100%;
+				color: #90a0b7;
+				font-size: 14px;
+				padding: 0rem 0.8rem;
+
+				&:focus {
+					outline: none;
+				}
+
+				&::placeholder {
+					color: #90a0b7;
+				}
+			}
+
+			.inp1 {
+				border-top-right-radius: 0px;
+				border-bottom-right-radius: 0px;
+			}
+
+			.inp2 {
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+			}
+
+			button {
+				height: 38px;
+				background: #8961de;
+				border-radius: 5px;
+			}
+		}
+
+		.user_btn_container {
+			button:nth-child(1) {
+				background: rgba(194, 207, 224, 0.25);
+				border-radius: 3px;
+				height: 30px;
+				width: 100px;
+			}
+			button:nth-child(2) {
+				background: #8961de;
+				border-radius: 3px;
+				height: 30px;
+				width: 100px;
+			}
+		}
+
+		.payment_table {
+			max-width: 100%;
+			overflow-x: auto;
+
+			table {
+				width: 100%;
+
+				tr {
+					th {
+						padding: 1.2rem 0rem;
+					}
+				}
+			}
+			tbody {
+				tr {
+					td {
+						padding: 1.2rem 0rem;
+
+						&:nth-child(2) {
+							min-width: 120px;
+						}
+
+						&:nth-child(3) {
+							min-width: 100px;
+						}
+
+						&:nth-child(4) {
+							min-width: 80px;
+						}
+
+						&:nth-child(5) {
+							min-width: 100px;
+						}
+					}
+				}
+			}
+		}
+	}
+	// PAYMENT PLANS END
 }
 // LIGHT END
 
@@ -769,6 +902,18 @@ hr {
 	}
 	.light .user_container_upper .user_table tbody tr td:nth-child(6) {
 		min-width: 140px;
+	}
+	.light .payment_container_upper .payment_table tbody tr td:nth-child(1) {
+		min-width: 200px;
+	}
+	.light .payment_container_upper .payment_table thead tr th:nth-child(4) {
+		min-width: 125px;
+	}
+	.light .payment_container_upper .payment_table thead tr th:nth-child(5) {
+		min-width: 125px;
+	}
+	.light .payment_container_upper .payment_table thead tr th:nth-child(6) {
+		min-width: 110px;
 	}
 }
 

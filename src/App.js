@@ -8,6 +8,7 @@ import { Switch, Route } from "react-router-dom";
 import { useState } from "react";
 import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
+import Payment from "./pages/Payment";
 
 function App() {
 	const [mode, setMode] = useState(true);
@@ -21,6 +22,7 @@ function App() {
 				<Route exact path="/" component={Login} />
 				<Route exact path="/dashboard" component={Dashboard} />
 				<Route exact path="/users" component={Users} />
+				<Route exact path="/payment" component={Payment} />
 			</Switch>
 		</div>
 	);
