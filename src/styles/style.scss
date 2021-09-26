@@ -483,14 +483,14 @@ body {
 	.chart_container {
 		.charts {
 			border-radius: 10px;
-			height: 400px;
+			// height: 400px;
 			position: relative;
 			padding: 3.8rem 0rem 0.8rem 0rem;
 
 			&:before {
 				content: "";
 				background-color: #fff;
-				height: 500px;
+				// height: 500px;
 			}
 
 			.charts_btn {
@@ -519,6 +519,14 @@ body {
 						}
 					}
 				}
+			}
+
+			.chart_cont_inner {
+				width: 100%;
+			}
+
+			.recharts-legend-wrapper {
+				display: none;
 			}
 		}
 	}
@@ -1448,6 +1456,14 @@ body {
 				}
 			}
 		}
+
+		.chart_cont_inner {
+			width: 100%;
+		}
+
+		.recharts-legend-wrapper {
+			display: none;
+		}
 	}
 	// CHART END
 
@@ -2131,7 +2147,7 @@ body {
 		min-width: 100px;
 	}
 	.light .chart_container .charts {
-		padding: 7.4rem 0rem 0.8rem 0rem;
+		padding: 6rem 0rem 0.8rem 0rem;
 	}
 	.light .user_container_upper .user_table tbody tr td:nth-child(1) {
 		min-width: 180px;

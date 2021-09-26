@@ -593,7 +593,6 @@ body {
 
 .light .chart_container .charts {
   border-radius: 10px;
-  height: 400px;
   position: relative;
   padding: 3.8rem 0rem 0.8rem 0rem;
 }
@@ -601,7 +600,6 @@ body {
 .light .chart_container .charts:before {
   content: "";
   background-color: #fff;
-  height: 500px;
 }
 
 .light .chart_container .charts .charts_btn {
@@ -630,6 +628,14 @@ body {
 .light .chart_container .charts .charts_btn .btn_container button.active_btn {
   background-color: #8961de;
   color: #fff;
+}
+
+.light .chart_container .charts .chart_cont_inner {
+  width: 100%;
+}
+
+.light .chart_container .charts .recharts-legend-wrapper {
+  display: none;
 }
 
 .light .recent_activity {
@@ -1717,6 +1723,14 @@ body {
   color: #fff;
 }
 
+.dark .chart_container .chart_cont_inner {
+  width: 100%;
+}
+
+.dark .chart_container .recharts-legend-wrapper {
+  display: none;
+}
+
 .dark .recent_activity {
   min-height: 1px;
   height: 100%;
@@ -2446,7 +2460,7 @@ body {
     min-width: 100px;
   }
   .light .chart_container .charts {
-    padding: 7.4rem 0rem 0.8rem 0rem;
+    padding: 6rem 0rem 0.8rem 0rem;
   }
   .light .user_container_upper .user_table tbody tr td:nth-child(1) {
     min-width: 180px;

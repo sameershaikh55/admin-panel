@@ -1,204 +1,70 @@
 import React from "react";
-import { Line } from "react-chartjs-2";
+// import { Line } from "react-chartjs-2";
+import {
+	XAxis,
+	CartesianGrid,
+	Tooltip,
+	ResponsiveContainer,
+	Area,
+	AreaChart,
+} from "recharts";
+
+const data = [
+	{
+		name: "08:00",
+		Sales: 3500,
+	},
+	{
+		name: "09:00",
+		Sales: 3300,
+	},
+	{
+		name: "10:00",
+		Sales: 3000,
+	},
+	{
+		name: "11:00",
+		Sales: 2600,
+	},
+	{
+		name: "12:00",
+		Sales: 2000,
+	},
+	{
+		name: "13:00",
+		Sales: 1700,
+	},
+	{
+		name: "14:00",
+		Sales: 1290,
+	},
+	{
+		name: "15:00",
+		Sales: 1110,
+	},
+	{
+		name: "16:00",
+		Sales: 1000,
+	},
+	{
+		name: "17:00",
+		Sales: 800,
+	},
+	{
+		name: "18:00",
+		Sales: 1290,
+	},
+	{
+		name: "19:00",
+		Sales: 1190,
+	},
+	{
+		name: "20:00",
+		Sales: 2090,
+	},
+];
 
 const ChartSec = () => {
-	let chart1_2_options = {
-		maintainAspectRatio: false,
-		plugins: {
-			legend: {
-				display: false,
-			},
-		},
-		tooltips: {
-			backgroundColor: "#f5f5f5",
-			titleFontColor: "#333",
-			bodyFontColor: "#666",
-			bodySpacing: 4,
-			xPadding: 12,
-			mode: "nearest",
-			intersect: 0,
-			position: "nearest",
-		},
-		responsive: true,
-		scales: {
-			yAxes: [
-				{
-					barPercentage: 1.6,
-					gridLines: {
-						drawBorder: false,
-						color: "rgba(29,140,248,0.0)",
-						zeroLineColor: "transparent",
-					},
-					ticks: {
-						suggestedMin: 60,
-						suggestedMax: 125,
-						padding: 20,
-						fontColor: "#9a9a9a",
-					},
-				},
-			],
-			xAxes: [
-				{
-					barPercentage: 1.6,
-					gridLines: {
-						drawBorder: false,
-						color: "rgba(29,140,248,0.1)",
-						zeroLineColor: "transparent",
-					},
-					ticks: {
-						padding: 20,
-						fontColor: "#9a9a9a",
-					},
-				},
-			],
-		},
-	};
-
-	let chartExample1 = {
-		data1: (canvas) => {
-			let ctx = canvas.getContext("2d");
-
-			let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
-
-			gradientStroke.addColorStop(1, "rgba(66, 78, 222,0.4)");
-			gradientStroke.addColorStop(0.4, "rgba(66, 78, 222,0.15)");
-			gradientStroke.addColorStop(0, "rgba(66, 78, 222,0.08)"); //blue colors
-
-			return {
-				labels: [
-					"JAN",
-					"FEB",
-					"MAR",
-					"APR",
-					"MAY",
-					"JUN",
-					"JUL",
-					"AUG",
-					"SEP",
-					"OCT",
-					"NOV",
-					"DEC",
-				],
-				datasets: [
-					{
-						label: "Dataset No 1",
-						fill: true,
-						backgroundColor: gradientStroke,
-						borderColor: "#424ede",
-						borderWidth: 2.5,
-						borderDash: [],
-						borderDashOffset: 0.0,
-						pointBackgroundColor: "#222870",
-						pointBorderColor: "rgba(66, 78, 222,0)",
-						pointHoverBackgroundColor: "#6e76e5",
-						pointBorderWidth: 20,
-						pointHoverRadius: 4,
-						pointHoverBorderWidth: 15,
-						pointRadius: 4,
-						data: [
-							100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100, 66, 78, 20,
-						],
-					},
-				],
-			};
-		},
-		data2: (canvas) => {
-			let ctx = canvas.getContext("2d");
-
-			let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
-
-			gradientStroke.addColorStop(1, "rgba(66, 78, 222,0.5)");
-			gradientStroke.addColorStop(0.4, "rgba(66, 78, 222,0.2)");
-			gradientStroke.addColorStop(0, "rgba(66, 78, 222,0.1)"); //blue colors
-
-			return {
-				labels: [
-					"JAN",
-					"FEB",
-					"MAR",
-					"APR",
-					"MAY",
-					"JUN",
-					"JUL",
-					"AUG",
-					"SEP",
-					"OCT",
-					"NOV",
-					"DEC",
-				],
-				datasets: [
-					{
-						label: "Dataset No 2",
-						fill: true,
-						backgroundColor: gradientStroke,
-						borderColor: "#424ede",
-						borderWidth: 2.5,
-						borderDash: [],
-						borderDashOffset: 0.0,
-						pointBackgroundColor: "#222870",
-						pointBorderColor: "rgba(66, 78, 222,0)",
-						pointHoverBackgroundColor: "#6e76e5",
-						pointBorderWidth: 20,
-						pointHoverRadius: 4,
-						pointHoverBorderWidth: 15,
-						pointRadius: 4,
-						data: [
-							80, 120, 105, 110, 95, 105, 66, 78, 22, 90, 100, 80, 95, 70, 120,
-						],
-					},
-				],
-			};
-		},
-		data3: (canvas) => {
-			let ctx = canvas.getContext("2d");
-
-			let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
-
-			gradientStroke.addColorStop(1, "rgba(66, 78, 222,0.5)");
-			gradientStroke.addColorStop(0.4, "rgba(66, 78, 222,0.2)");
-			gradientStroke.addColorStop(0, "rgba(66, 78, 222,0.1)"); //blue colors
-
-			return {
-				labels: [
-					"JAN",
-					"FEB",
-					"MAR",
-					"APR",
-					"MAY",
-					"JUN",
-					"JUL",
-					"AUG",
-					"SEP",
-					"OCT",
-					"NOV",
-					"DEC",
-				],
-				datasets: [
-					{
-						label: "Dataset No 3",
-						fill: true,
-						backgroundColor: gradientStroke,
-						borderColor: "#424ede",
-						borderWidth: 2.5,
-						borderDash: [],
-						borderDashOffset: 0.0,
-						pointBackgroundColor: "#222870",
-						pointBorderColor: "rgba(66, 78, 222,0)",
-						pointHoverBackgroundColor: "#6e76e5",
-						pointBorderWidth: 20,
-						pointHoverRadius: 4,
-						pointHoverBorderWidth: 15,
-						pointRadius: 4,
-						data: [
-							60, 80, 65, 130, 80, 66, 78, 22, 105, 90, 130, 70, 115, 60, 130,
-						],
-					},
-				],
-			};
-		},
-		options: chart1_2_options,
-	};
-
 	const [bigChartData, setbigChartData] = React.useState("data1");
 	const setBgChartData = (name) => {
 		setbigChartData(name);
@@ -228,14 +94,14 @@ const ChartSec = () => {
 										Weekly
 									</button>
 									<button
-										className={`${bigChartData === "data2" && "active_btn"}`}
-										onClick={() => setBgChartData("data2")}
+										className={`${bigChartData === "data3" && "active_btn"}`}
+										onClick={() => setBgChartData("data3")}
 									>
 										Monthly
 									</button>
 									<button
-										className={`${bigChartData === "data2" && "active_btn"}`}
-										onClick={() => setBgChartData("data2")}
+										className={`${bigChartData === "data4" && "active_btn"}`}
+										onClick={() => setBgChartData("data4")}
 									>
 										Yearly
 									</button>
@@ -253,12 +119,51 @@ const ChartSec = () => {
 								<p className="mb-0 color1 f14">Sales</p>
 							</div>
 						</div>
-						<hr />
-						chart in development
-						{/* <Line
-							data={chartExample1[bigChartData]}
-							options={chartExample1.options}
-						/> */}
+
+						<div className="chart_cont_inner">
+							<ResponsiveContainer width="100%" height="100%" aspect={3}>
+								<AreaChart
+									data={data}
+									margin={{ top: 15, right: 0, left: 0, bottom: 0 }}
+								>
+									<defs>
+										<linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+											<stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
+											<stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+										</linearGradient>
+										<linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+											<stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
+											<stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+										</linearGradient>
+									</defs>
+									<XAxis dataKey="name" stroke="#90A0B7" />
+									<CartesianGrid vertical={false} opacity="0.4" />
+									<Tooltip
+										contentStyle={{
+											backgroundColor: "rgba(137, 97, 222, 0.25)",
+											boxShadow: " 0px 2px 6px rgba(0, 0, 0, 0.1)",
+											borderRadius: "5px",
+											border: "1px solid rgba(137, 97, 222, 0.25)",
+										}}
+										itemStyle={{
+											color: "#8884d8",
+										}}
+										labelStyle={{
+											color: "#fff",
+										}}
+									/>
+									<Area
+										type="monotone"
+										dataKey="Sales"
+										stroke="#8884d8"
+										fillOpacity={1}
+										fill="url(#colorUv)"
+										activeDot={{ r: 5 }}
+										strokeWidth="2.4px"
+									/>
+								</AreaChart>
+							</ResponsiveContainer>
+						</div>
 					</div>
 				</div>
 			</div>
